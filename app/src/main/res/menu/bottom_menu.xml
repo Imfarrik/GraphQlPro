@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/bottom_calls"
+        android:icon="@drawable/phone"
+        android:title="Calls" />
+    <item
+        android:id="@+id/bottom_chat"
+        android:icon="@drawable/ic_messages"
+        android:title="Chat" />
+    <item
+        android:id="@+id/bottom_leads"
+        android:icon="@drawable/users"
+        android:title="Leads" />
+    <item
+        android:id="@+id/bottom_more"
+        android:icon="@drawable/more_horizontal"
+        android:title="More" />
+</menu>

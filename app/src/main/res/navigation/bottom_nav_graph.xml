@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/bottom_home">
+
+    <fragment
+        android:id="@+id/bottom_home"
+        android:name="com.example.fortest.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bottom_calls"
+        android:name="com.example.fortest.ui.calls.CallsFragment"
+        android:label="fragment_calls"
+        tools:layout="@layout/fragment_calls" />
+    <fragment
+        android:id="@+id/bottom_chat"
+        android:name="com.example.fortest.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/bottom_leads"
+        android:name="com.example.fortest.ui.leads.LeadsFragment"
+        android:label="fragment_leads"
+        tools:layout="@layout/fragment_leads" />
+    <fragment
+        android:id="@+id/bottom_more"
+        android:name="com.example.fortest.ui.more.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+</navigation>

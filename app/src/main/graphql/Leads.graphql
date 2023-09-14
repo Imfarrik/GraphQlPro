@@ -1,0 +1,22 @@
+query FetchInput {
+    fetchLeads {
+        data {
+            id
+            avatar {
+                path
+            }
+            lastName
+            firstName
+            city {
+                country{
+                    emoji
+                }
+            }
+            status {
+                backgroundColor
+                title
+            }
+            createdAt
+        }
+    }
+}
