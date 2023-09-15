@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp"
     android:orientation="vertical"
+    android:paddingHorizontal="16dp"
     tools:context=".ui.lead_details.LeadDetailsActivity">
 
     <LinearLayout
@@ -100,6 +100,7 @@
             app:strokeWidth="1dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/status_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -178,7 +179,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
-                    android:id="@+id/seekBar"
+                    android:id="@+id/progress_bar"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="12dp"
@@ -217,11 +218,11 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginBottom="12dp"
+        android:outlineProvider="none"
         app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="12dp"
-        android:outlineProvider="none"
-        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -229,20 +230,21 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/chat_btn"
-                android:layout_width="108dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:outlineProvider="none"
                 app:cardBackgroundColor="@color/black"
                 app:cardCornerRadius="12dp"
-                app:layout_constraintEnd_toStartOf="@id/call_btn"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/call_btn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:strokeColor="#E8A889"
@@ -251,7 +253,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -259,7 +261,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="center"
                         android:layout_marginStart="16dp"
-                        android:src="@drawable/ic_messages_orange" />
+                        android:src="@drawable/ic_messages"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -281,14 +283,15 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/call_btn"
-                android:layout_width="108dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:outlineProvider="none"
                 app:cardBackgroundColor="#E8A889"
                 app:cardCornerRadius="12dp"
-                app:layout_constraintStart_toEndOf="@id/chat_btn"
+                android:layout_marginStart="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chat_btn"
                 app:layout_constraintTop_toTopOf="parent"
                 app:strokeColor="#E8A889"
                 app:strokeWidth="1dp">
@@ -309,9 +312,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginVertical="12dp"
                         android:text="Call"
                         android:textColor="@color/black" />
 

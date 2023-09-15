@@ -3,4 +3,15 @@
     <string name="action_back">Back</string>
     <string name="leads">Leads</string>
     <string name="lead_details">Lead details</string>
+    <string name="create_lead">Create lead</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="language">Language</string>
+    <string name="lead_intention">Lead intention</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="country">Country</string>
+    <string name="edit_info">Edit info</string>
 </resources>

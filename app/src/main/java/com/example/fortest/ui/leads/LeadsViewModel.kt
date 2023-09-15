@@ -22,19 +22,7 @@ class LeadsViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             val a = apolloClient.query(FetchInputQuery()).execute()
-            val b = apolloClient.mutation(
-                CreateLeadMutation(
-                    CreateLeadInput(
-                        firstName = "FarrukhTest",
-                        contacts = listOf(),
-                        intentionId = 2,
-                        languageIds = listOf(2, 3)
-                    )
-                )
-            ).execute()
             _leadsList.value = a.data?.fetchLeads?.data
-            Log.d("LaunchList", "Success ${a.data}")
-            Log.d("LaunchList", "Success ${b.data}")
         }
     }
 }

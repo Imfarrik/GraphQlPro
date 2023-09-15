@@ -8,7 +8,7 @@ import com.example.fortest.databinding.ItemLeadsBinding
 import com.example.rocketreserver.FetchInputQuery
 
 
-class LeadsAdapter : RecyclerView.Adapter<LeadsAdapter.LeadViewHolder>() {
+class LeadsAdapter(private val onClick: (FetchInputQuery.Data1) -> Unit) : RecyclerView.Adapter<LeadsAdapter.LeadViewHolder>() {
 
     private var mCardList = mutableListOf<FetchInputQuery.Data1>()
 
@@ -44,6 +44,10 @@ class LeadsAdapter : RecyclerView.Adapter<LeadsAdapter.LeadViewHolder>() {
         private val mContext = binding.root.context
 
         fun initCardView(item: FetchInputQuery.Data1?, position: Int) {
+
+            itemView.setOnClickListener {
+                onClick(item!!)
+            }
 
             binding.leadType.text = item?.status?.title
             binding.followDate.text = item?.createdAt.toString()

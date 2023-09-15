@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialSpinnerView">
+        <attr name="arrowColor" format="color" />
+        <attr name="arrowDrawable" format="reference" />
+        <attr name="arrowHidden" format="boolean" />
+        <attr name="popup_height" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="popup_itemPaddingBottom" format="dimension" />
+        <attr name="popup_itemPaddingLeft" format="dimension" />
+        <attr name="popup_itemPaddingRight" format="dimension" />
+        <attr name="popup_itemPaddingTop" format="dimension" />
+        <attr name="popup_itemTextColor" format="color" />
+        <attr name="popup_maxHeight" format="dimension" />
+        <attr name="popup_elevation" format="dimension" />
+        <attr name="textHint" format="string" />
+    </declare-styleable>
+</resources>
